@@ -30,7 +30,7 @@ You can schedule this script to run at regular intervals to ensure continuous mo
 ## 5. Setting Up Grafana:
 ### 1.Install Grafana:
 Install Grafana on your server. Follow Grafana’s official documentation for installation steps: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
-Go to http://<serverip>:3000/
+Go to http://serverip:3000/
 ### 2.Add InfluxDB as a Data Source:
    Grafana, go to Configuration > Data Sources.
    Add a new data source, choose InfluxDB, and provide necessary details like URL and database name.
