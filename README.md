@@ -54,7 +54,6 @@ FORMAT AS Time series, give it an ALIAS
  ```
 influx
 use test
-Using database test
 select * from speedtest
  ```
 
