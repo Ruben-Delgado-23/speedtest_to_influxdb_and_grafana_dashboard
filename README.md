@@ -36,7 +36,9 @@ Go to http://serverip:3000/
    Add a new data source, choose InfluxDB, and provide necessary details like URL and database name.
  
 ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/ddeb39bd-341c-416a-a5d1-38cd3486fc6b)
-  Add database name, user ans password
+
+  Add database name, user and password.
+  
   ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/d6839c8d-b398-4341-b706-e58cbcc11fec)
 
 ### 3. Create a Dashboard:
