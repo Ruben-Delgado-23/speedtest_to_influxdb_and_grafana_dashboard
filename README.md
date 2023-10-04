@@ -46,7 +46,8 @@ You can use InfluxDB queries to visualize your internet speed data. For example,
 FORMAT AS Time series, give it an ALIAS 
  ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/954ddaf6-a47d-4ede-aecb-eab66aba9be6)
 
-## 6. Running the script and confirm the data on influxdb and Granafa
+## 6. Running the script and confirm the data on Influxdb and Grafana
+**Influxdb**
  ```
 influx
 use test
@@ -56,7 +57,7 @@ select * from speedtest
 
 ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/5e5814ac-e315-4afa-8ae0-b97921147a6c)
 
-
+**Grafana**
 Dasboard
 
 ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/9eb5b5b2-e3cf-41ef-a395-6572b73a1126)
