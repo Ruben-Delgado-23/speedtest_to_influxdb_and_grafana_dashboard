@@ -19,8 +19,8 @@ You can schedule this script to run at regular intervals to ensure continuous mo
 ## 4. Setting Up InfluxDB:
  ### 1.Install InfluxDB on RaspiOS. 
  Follow InfluxDB’s official documentation for installation steps: Grafana Installation   Guide. https://docs.influxdata.com/influxdb/v2/install/?t=Linux
- ### 2. Make sure InfluxDB is installed and running. 
-  Create a database where you'll store your speed
+ ### 2. Create a database on InfluxDB
+  Create a database where you will store your speedtest measurements
  ```
   create database test
   use test
