@@ -62,7 +62,7 @@ select * from speedtest
 
 **Grafana**
 
-Dasboard
+Dashboard
 
 ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/9eb5b5b2-e3cf-41ef-a395-6572b73a1126)
 
