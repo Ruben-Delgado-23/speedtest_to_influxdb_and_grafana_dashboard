@@ -1,10 +1,13 @@
-Speedtest_to_influxdb_and_grafana_dashboard
+# Speedtest to influxdb and grafana dashboard
 
 This system will set up a dashboard to monitor and track internet speed using free software: Python, the speedtest-cli library by Ookla, InfluxDB, and Grafana. This setup will run on RaspiOS on a Raspberry Pi 4. The Python script will consistently execute the Speedtest CLI application, restructure the output data, and send it to an InfluxDB database. InfluxDB will be connected to Grafana, allowing you to visualize and investigate this data.
 
-1. Install Necessary Libraries:
+## 1. Install Necessary Libraries:
    
-Install the required libraries, python and the speedtest-cli package
+Install the required libraries
+```
+python and the speedtest-cli package
+```
 
 sudo pip install speedtest-cli influxdb
 sudo apt-get install python3-pip
