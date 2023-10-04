@@ -4,33 +4,34 @@ This system will set up a dashboard to monitor and track internet speed using fr
 
 ## 1. Install Necessary Libraries:
    
-Install the required libraries
+Install the required libraries python and the speedtest-cli package
 ```
-python and the speedtest-cli package
-```
-
 sudo pip install speedtest-cli influxdb
 sudo apt-get install python3-pip
+```
 
-3. Speedtest Using Python:
+## 2. Speedtest Using Python:
 Create a Python script that uses speedtest-cli to measure the internet speed and sends the data to InfluxDB.
 
-5. Schedule the Script:
+## 3. Schedule the Script:
 You can schedule this script to run at regular intervals to ensure continuous monitoring.
 
-7. Setting Up InfluxDB:
-  1.Install InfluxDB on RaspiOS. Follow InfluxDB’s official documentation for installation steps: Grafana Installation   Guide. https://docs.influxdata.com/influxdb/v2/install/?t=Linux
-  2. Make sure InfluxDB is installed and running. Create a database where you'll store your speed
+## 4. Setting Up InfluxDB:
+ ### 1.Install InfluxDB on RaspiOS. 
+ Follow InfluxDB’s official documentation for installation steps: Grafana Installation   Guide. https://docs.influxdata.com/influxdb/v2/install/?t=Linux
+ ### 2. Make sure InfluxDB is installed and running. 
+  Create a database where you'll store your speed
+ ```
   create database test
   use test
   create user admin1 with password 'admin123' with all privileges
   grant all privileges on test to admin1
-
-5. Setting Up Grafana:
-1.Install Grafana:
+```
+## 5. Setting Up Grafana:
+### 1.Install Grafana:
 Install Grafana on your server. Follow Grafana’s official documentation for installation steps: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
 Go to http://<serverip>:3000/
-2.Add InfluxDB as a Data Source:
+### 2.Add InfluxDB as a Data Source:
    Grafana, go to Configuration > Data Sources.
    Add a new data source, choose InfluxDB, and provide necessary details like URL and database name.
  
@@ -38,18 +39,21 @@ Go to http://<serverip>:3000/
   Add database name, user ans password
   ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/d6839c8d-b398-4341-b706-e58cbcc11fec)
 
-Create a Dashboard:
+### 3. Create a Dashboard:
 Create a new dashboard in Grafana.
 Add a new panel and configure it to use the InfluxDB data source you created earlier.
 You can use InfluxDB queries to visualize your internet speed data. For example, you can use a query like FROM defualt "speedtest"  SELECT field("upload") distinct() GROUP BY time($_interval)
 FORMAT AS Time series, give it an ALIAS 
  ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/954ddaf6-a47d-4ede-aecb-eab66aba9be6)
 
-6. Running the scrip and confirm the data on influxdb and Granafa
+## 6. Running the script and confirm the data on influxdb and Granafa
+ ```
 influx
-> use test
+use test
 Using database test
-> select * from speedtest
+select * from speedtest
+ ```
+
 ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/5e5814ac-e315-4afa-8ae0-b97921147a6c)
 
 
