@@ -46,6 +46,7 @@ Create a new dashboard in Grafana.
 Add a new panel and configure it to use the InfluxDB data source you created earlier.
 You can use InfluxDB queries to visualize your internet speed data. For example, you can use a query like FROM defualt "speedtest"  SELECT field("upload") distinct() GROUP BY time($_interval)
 FORMAT AS Time series, give it an ALIAS 
+
  ![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/954ddaf6-a47d-4ede-aecb-eab66aba9be6)
 
 ## 6. Running the script and confirm the data on Influxdb and Grafana
