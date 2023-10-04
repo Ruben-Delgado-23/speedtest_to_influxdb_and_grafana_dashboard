@@ -58,7 +58,8 @@ Using database test
 select * from speedtest
  ```
 
-![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/5e5814ac-e315-4afa-8ae0-b97921147a6c)
+![image](https://github.com/Ruben-Delgado-23/speedtest_to_influxdb_and_grafana_dashboard/assets/139746600/fa705235-6ffc-4246-ae0a-7e92032c237a)
+
 
 **Grafana**
 Dasboard
